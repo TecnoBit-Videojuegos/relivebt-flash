@@ -1,6 +1,6 @@
 # ReLiveBT Web Config
 
-Páginas de configuración por **Web Bluetooth** para el adaptador **Re-Live BT Controller** de [TecnoBit Videojuegos](https://github.com/TecnoBit-Videojuegos). Desde tu navegador puedes mapear botones, cambiar opciones y gestionar tu adaptador, sin instalar nada.
+Páginas de configuración por **Web Bluetooth** para el adaptador **Re-Live BT Controller** de [TecnoBit Videojuegos](https://github.com/TecnoBit-Videojuegos/relivebt-flash). Desde tu navegador puedes mapear botones, cambiar opciones y gestionar tu adaptador, sin instalar nada.
 
 🌐 **Configurador:** https://tecnobit-videojuegos.github.io/BlueRetroWebCfg/
 🔄 **Actualizador de firmware:** https://tecnobit-videojuegos.github.io/relivebt-flash/
