@@ -29,40 +29,11 @@ Páginas de configuración por **Web Bluetooth** para el adaptador **Re-Live BT 
 
 ---
 
-## Páginas incluidas
-
-| Página | Para qué sirve |
-|---|---|
-| `index.html` | Configuración principal y mapeo de botones |
-| `advance.html` | Opciones avanzadas |
-| `presets.html` | Perfiles de configuración predefinidos |
-| `system.html` | Ajustes del sistema del adaptador |
-| `ota.html` | Actualización de firmware por Bluetooth |
-| `files.html` | Gestión de archivos del adaptador |
-| `n64_ctrlpak.html` | Controller Pak de N64 |
-| `dc_vmu.html` | VMU de Dreamcast |
-| `debug.html` | Herramientas de diagnóstico |
-
----
-
 ## Problemas frecuentes
 
 - **No aparece mi adaptador en la lista:** revisa que esté encendido, que ningún control esté conectado a él y que uses un navegador compatible.
 - **Se desconecta o no responde:** apaga y enciende el adaptador, recarga la página y vuelve a conectar.
 - **En iPhone no funciona:** es una limitación de iOS. Usa un PC o un Android con Chrome.
-
----
-
-## Probarlo en tu computadora (opcional)
-
-El sitio está hecho con [Jekyll](https://jekyllrb.com/) y se publica con GitHub Pages. Si quieres verlo en local:
-
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-Luego abre `http://localhost:4000`. Web Bluetooth funciona en `localhost` sin necesidad de HTTPS.
 
 ---
 
