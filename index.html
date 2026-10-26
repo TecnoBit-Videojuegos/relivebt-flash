@@ -310,6 +310,25 @@
   .fw-info-item li{ margin-bottom:2px; }
   .fw-info-item b{ color: var(--lilac); }
 
+  /* configurator link card */
+  .cfg-card{
+    background: linear-gradient(155deg, rgba(139,95,201,.22), rgba(91,45,142,.10));
+    border: 1px solid rgba(212,187,255,.28);
+  }
+  .cfg-card h2{ font-size:18px; color:#fff; margin-bottom:8px; letter-spacing:-0.01em; }
+  .cfg-card p{ font-size:13.5px; color: rgba(233,223,255,.75); margin-bottom:16px; }
+  .cfg-btn{
+    display:inline-block; text-decoration:none;
+    font-weight:600; font-size:13.5px; color:#fff;
+    padding: 12px 22px; border-radius:11px;
+    background: linear-gradient(155deg, #9d6fe0, var(--purple-600));
+    box-shadow: 0 6px 16px -6px rgba(91,45,142,.7);
+    transition: filter .12s ease, transform .12s ease;
+  }
+  .cfg-btn:hover{ filter:brightness(1.1); }
+  .cfg-btn:active{ transform: scale(.97); }
+  .cfg-note{ margin-top:12px; font-size:11.5px; color: rgba(233,223,255,.5); }
+
   @media (prefers-reduced-motion: reduce){
     *{ animation:none !important; transition:none !important; }
   }
@@ -481,6 +500,15 @@
     </div>
   </div>
 
+  <!-- CONFIGURATOR LINK -->
+  <div class="card cfg-card">
+    <label class="field-label" id="txtCfgLabel">Configuración</label>
+    <h2 id="txtCfgTitle">Configura y mapea tu control</h2>
+    <p id="txtCfgDesc">Ajusta botones, presets y opciones de tu adaptador por Bluetooth desde el configurador web.</p>
+    <a class="cfg-btn" id="cfgBtn" href="https://tecnobit-videojuegos.github.io/BlueRetroWebCfg/" target="_blank" rel="noopener">⚙️ <span id="txtCfgBtn">Abrir configurador</span></a>
+    <div class="cfg-note" id="txtCfgNote">Requiere Chrome, Edge u Opera. Actualiza el firmware aquí primero si aún no lo has hecho.</div>
+  </div>
+
   <footer id="txtFooter">
     Compatible con Re-Live BT Controller · N64 · PS1 · SNES Jr · GameCube — TecnoBit Videojuegos
   </footer>
@@ -543,6 +571,11 @@ const I18N = {
     titleHTML: 'Actualiza tu <em>Re-Live BT</em> sin abrir la consola',
     subtitle: "Conecta tu adaptador por Bluetooth desde este navegador y sube el nuevo firmware directamente — sin cables, sin soldar, sin desarmar nada.",
     brandSub: "Actualizador de Firmware",
+    cfgLabel: "Configuración",
+    cfgTitle: "Configura y mapea tu control",
+    cfgDesc: "Ajusta botones, presets y opciones de tu adaptador por Bluetooth desde el configurador web.",
+    cfgBtn: "Abrir configurador",
+    cfgNote: "Requiere Chrome, Edge u Opera. Actualiza el firmware aquí primero si aún no lo has hecho.",
     browserWarnHTML: 'Tu navegador no soporta Web Bluetooth. Abre esta página en <b>Chrome</b>, <b>Edge</b> u <b>Opera</b> (en PC o Android). Safari, Firefox e iOS no son compatibles.',
     statusDefaultTitle: "Sin conexión",
     statusDefaultSub: "Enciende tu adaptador y presiona conectar",
@@ -611,6 +644,11 @@ const I18N = {
     titleHTML: 'Update your <em>Re-Live BT</em> without opening the console',
     subtitle: "Connect your adapter over Bluetooth from this browser and upload the new firmware directly — no cables, no soldering, no disassembly.",
     brandSub: "Firmware Updater",
+    cfgLabel: "Configuration",
+    cfgTitle: "Configure and map your controller",
+    cfgDesc: "Adjust buttons, presets and adapter options over Bluetooth from the web configurator.",
+    cfgBtn: "Open configurator",
+    cfgNote: "Requires Chrome, Edge or Opera. Update the firmware here first if you haven't yet.",
     browserWarnHTML: 'Your browser does not support Web Bluetooth. Open this page in <b>Chrome</b>, <b>Edge</b>, or <b>Opera</b> (on PC or Android). Safari, Firefox, and iOS are not supported.',
     statusDefaultTitle: "Not connected",
     statusDefaultSub: "Turn on your adapter and press connect",
@@ -709,6 +747,11 @@ function applyLanguage(lang) {
   document.getElementById("txtStep4Title").textContent = d.step4Title;
   document.getElementById("txtStep4Desc").textContent = d.step4Desc;
   document.getElementById("txtFooter").textContent = d.footer;
+  document.getElementById("txtCfgLabel").textContent = d.cfgLabel;
+  document.getElementById("txtCfgTitle").textContent = d.cfgTitle;
+  document.getElementById("txtCfgDesc").textContent = d.cfgDesc;
+  document.getElementById("txtCfgBtn").textContent = d.cfgBtn;
+  document.getElementById("txtCfgNote").textContent = d.cfgNote;
   document.getElementById("txtWhatsNewLabel").textContent = d.whatsNew;
   document.getElementById("txtInfoCommonTitle").textContent = d.infoCommonTitle;
   document.getElementById("txtInfoPower1").innerHTML = d.infoPower1;
